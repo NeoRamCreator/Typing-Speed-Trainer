@@ -4,7 +4,7 @@ import { configureStore, createSlice } from '@reduxjs/toolkit';
 const typingSlice = createSlice({
   name: 'typing',
   initialState: {
-    text: 'This is a sample text for typing practice.',
+    text: 'Это образец текста для практики набора текста.',
     userInput: '',
     startTime: null,
     errors: 0,
@@ -31,7 +31,6 @@ const typingSlice = createSlice({
       // Проверка на окончание ввода
       if (input.length >= state.text.length) {
         state.isFinished = true;
-        state.endTime = Date.now();
       }
     },
     startTyping: (state) => {

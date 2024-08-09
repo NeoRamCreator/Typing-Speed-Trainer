@@ -1,43 +1,49 @@
-
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   color: aliceblue;
-  /* color: #33e43f; */
 }
+
 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #272822FF;
+  max-width: 100vw;
 }
 
 textarea {
   font-size: 16px;
-  padding: 10px;
   width: 100%;
-  max-width: 600px;
-  margin-top: 10px;
+  color: black;
+  height: 80vh;
+
 }
 
-input {
+.typing-input {
+  color: black;
+  opacity: 0;
+  /* opacity: 0.3; */
+}
+
+.typing-text {
+  text-align: center;
+  padding: 20px;
+}
+
+.typing-text,
+.typing-input {
   font-size: 16px;
-  padding: 10px;
   width: 100%;
-  max-width: 600px;
-  margin-top: 10px;
   color: black;
 }
 
 button {
-  /* margin-top: 10px; */
   padding: 10px 20px;
   font-size: 16px;
   color: black;
-
 }
 
 span {
@@ -45,6 +51,38 @@ span {
   font-size: 20px;
 }
 
-.new-text-btn {
+.t1 {
+  border: 2px solid #ad0b0b;
+}
+
+.typing-input,
+.typing-text {
+  position: absolute;
+}
+
+.content {
+  position: relative;
+  width: 100vw;
+}
+
+.app {
+  margin-top: 30px;
+  position: relative;
+  max-width: 100vw;
+  text-align: center;
+}
+
+.actions * {
   margin: 10px;
+}
+
+.stats {
+  margin-top: 30px;
+}
+
+@media (max-width: 500px) {
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
 }

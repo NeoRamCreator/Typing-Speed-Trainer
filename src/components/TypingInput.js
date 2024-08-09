@@ -10,15 +10,13 @@ const TypingInput = () => {
         dispatch(updateInput({ input: e.target.value }));
     };
 
-    const handleRestart = () => {
-        dispatch(startTyping());
-    };
+ 
 
     return (
-        <div>
+        <div className='typing-input'>
             {!isFinished && (
 
-                <input
+                <textarea
                     type="text"
                     value={userInput}
                     onChange={handleChange}
@@ -27,7 +25,7 @@ const TypingInput = () => {
                 />
             )}
 
-            <button onClick={handleRestart}>Restart</button>
+          
         </div>
     );
 };
