@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+### **Задание:**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Создать приложение "Typing Speed Trainer" на React, которое оценит скорость печати пользователя. Приложение должно предоставлять пользователю текст для ввода, показывать правильные и неправильные символы разными цветами, а также отображать статистику по скорости печати и числу ошибок.
 
-## Available Scripts
+Пример сайта: https://monkeytype.com/
 
-In the project directory, you can run:
+### Основные требования:
 
-### `npm start`
+1. **React**:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Использовать React для построения интерфейса приложения.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Использовать любой стейт-менеджер на выбор (Redux, MobX, Context API и т.д.).
 
-### `npm test`
+2. **Функциональность**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Отображение текста для ввода. Текст можно брать из любого источника (например, заранее определенный массив строк).
 
-### `npm run build`
+- Подсветка правильных и неправильных символов разными цветами в реальном времени, пока пользователь вводит текст.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Подсчет скорости печати (слов в минуту, WPM).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Отображение количества ошибок (неправильно введенных символов).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Интерфейс**:
 
-### `npm run eject`
+- Должен быть простой и интуитивно понятный интерфейс.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Разметка и стилизация должны быть выполнены с помощью CSS-in-JS или CSS-фреймворка (например, styled-components, CSS модули, или любая другая технология на ваше усмотрение).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Адаптивный дизайн, чтобы приложение хорошо отображалось на мобильных устройствах.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Производительность**:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Обеспечить быструю работу приложения, чтобы оно не задерживалось при вводе текста.
 
-## Learn More
+- Минимизировать количество перерисовок компонентов React.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Дополнительно**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Должно быть сообщение или экран с результатами после завершения ввода текста, показывающий WPM и количество ошибок.
 
-### Code Splitting
+- Добавить возможность перезапустить упражнение.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Примерный план работы:
 
-### Analyzing the Bundle Size
+1. **Создание проекта**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Создать новый проект на Create React App или с использованием другого подходящего инструмента.
 
-### Making a Progressive Web App
+- Установить и настроить выбранный стейт-менеджер.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Создание интерфейса**:
 
-### Advanced Configuration
+- Разработать компонент для отображения текста.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Разработать компонент для ввода текста пользователем.
 
-### Deployment
+3. **Подсветка введенного текста**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Реализовать логику сравнения ввода пользователя с предоставленным текстом.
 
-### `npm run build` fails to minify
+- Добавить стилизацию для правильно и неправильно введенных символов.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. **Подсчет статистики**:
+
+- Реализовать подсчет скорости печати (WPM).
+
+- Реализовать подсчет ошибочных символов.
+
+5. **Финализация и улучшения**:
+
+- Добавить экран с результатами.
+
+- Добавить кнопку для перезапуска тренировочного упражнения.
+
+- Оптимизировать приложение для повышения скорости работы.
+
+### Ожидаемые результаты:
+
+- Рабочее приложение, соответствующее всем вышеописанным требованиям.
+- Чистый и понятный код, разделенный на компоненты.
+- Приложение должно быть оптимизировано для быстрой работы.
+- Правильно структурированные и документированные файлы с комментариями, объясняющими ключевые части кода.
+
+### Оценка:
+
+- Правильность и полнота выполнения задания.
+- Чистота и структурированность кода.
+- Уровень владения React и выбранным стейт-менеджером.
+- Оптимизация производительности и скорость работы приложения.
+- Внимание к деталям и стилю интерфейса.
